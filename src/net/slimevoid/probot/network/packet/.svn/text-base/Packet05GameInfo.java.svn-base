@@ -1,0 +1,51 @@
+package net.slimevoid.rpg.network.packet;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import net.slimevoid.rpg.logic.PlayerInfo;
+
+public class Packet05GameInfo extends Packet {
+	
+	private PlayerInfo player1;
+	private PlayerInfo player2;
+	private int localPlayer;
+	
+	public Packet05GameInfo() {
+		player1 = new PlayerInfo();
+		player2 = new PlayerInfo();
+	}
+	
+	public Packet05GameInfo(PlayerInfo player1, PlayerInfo player2, int localPlayer) {
+		this.player1 = player1;
+		this.player2 = player2;
+		this.localPlayer = localPlayer;
+	}
+
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		player1.read(in);
+		player2.read(in);
+		localPlayer = in.read();
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		player1.write(out);
+		player2.write(out);
+		out.write(localPlayer);
+	}
+	
+	public PlayerInfo getPlayer1() {
+		return player1;
+	}
+	
+	public PlayerInfo getPlayer2() {
+		return player2;
+	}
+	
+	public int getLocalPlayer() {
+		return localPlayer;
+	}
+}

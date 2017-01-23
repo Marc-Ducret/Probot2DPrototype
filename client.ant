@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project Probot">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/release"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/probotClient.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="net.slimevoid.probot.client.ProbotClient"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="${dir.buildfile}/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/rsyntaxtextarea.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/autocomplete.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/js.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="${dir.buildfile}/lib/language_support.jar"/>
+        </jar>
+    </target>
+</project>

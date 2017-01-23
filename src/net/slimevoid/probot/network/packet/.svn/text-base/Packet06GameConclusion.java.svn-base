@@ -1,0 +1,38 @@
+package net.slimevoid.rpg.network.packet;
+
+import net.slimevoid.rpg.logic.Character;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import net.slimevoid.rpg.logic.Game;
+
+public class Packet06GameConclusion extends Packet {
+	
+	private int winner;
+	
+	public Packet06GameConclusion() {
+	}
+	
+	public Packet06GameConclusion(int winner) {
+		this.winner = winner;
+	}
+
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		winner = in.read();
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		out.write(winner);
+	}
+	
+	public Character getWinner(Game game) {
+		if(winner > 1) {
+			return null;
+		}
+		return winner == 0 ? game.getChar1() : game.getChar2();
+	}
+}

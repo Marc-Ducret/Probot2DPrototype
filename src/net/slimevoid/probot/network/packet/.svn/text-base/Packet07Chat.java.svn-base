@@ -1,0 +1,51 @@
+package net.slimevoid.rpg.network.packet;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+public class Packet07Chat extends Packet {
+
+	private String message;
+	private String username;
+	private MessageType type;
+	
+	public Packet07Chat() {
+	}
+	
+	public Packet07Chat(String message, String username, MessageType type) {
+		this.message = message;
+		this.username = username;
+		this.type = type;
+	}
+	
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		message = in.readUTF();
+		username = in.readUTF();
+		type = MessageType.values()[in.read()];
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		out.writeUTF(message);
+		out.writeUTF(username);
+		out.write(type.ordinal());
+	}
+	
+	public String getMessage() {
+		return message;
+	}
+	
+	public String getUsername() {
+		return username;
+	}
+	
+	public MessageType getType() {
+		return type;
+	}
+
+	public static enum MessageType {
+		PERSONNAL, GLOBAL;
+	}
+}

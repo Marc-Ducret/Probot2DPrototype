@@ -1,0 +1,35 @@
+package net.slimevoid.rpg.network.packet;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import net.slimevoid.rpg.logic.actions.Action;
+
+
+public class Packet03Action extends Packet {
+	
+	private Action action;
+	
+	public Packet03Action() {
+	}
+	
+	public Packet03Action(Action action) {
+		this.action = action;
+	}
+	
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		int i = in.read();
+		action = i == 255 ? null : Action.actions.get(i);
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		out.write(Action.actions.indexOf(action));
+	}
+
+	public Action getAction() {
+		return action;
+	}
+}

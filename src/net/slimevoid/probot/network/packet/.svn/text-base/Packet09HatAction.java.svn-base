@@ -1,0 +1,46 @@
+package net.slimevoid.rpg.network.packet;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import net.slimevoid.rpg.logic.Hat;
+import net.slimevoid.rpg.logic.Hats;
+
+public class Packet09HatAction extends Packet {
+	
+	private HatAction action;
+	private Hat hat;
+	
+	public Packet09HatAction(HatAction action, Hat hat) {
+		this.action = action;
+		this.hat = hat;
+	}
+	
+	public Packet09HatAction() {
+	}
+
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		action = HatAction.values()[in.read()];
+		hat = Hats.getHat(in.readInt());
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		out.write(action.ordinal());
+		out.writeInt(hat == null ? -1 : hat.getId());
+	}
+	
+	public Hat getHat() {
+		return hat;
+	}
+	
+	public HatAction getAction() {
+		return action;
+	}
+	
+	public static enum HatAction {
+		BUY, CHANGE;
+	}
+}

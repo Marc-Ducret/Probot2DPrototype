@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/dagame/!svn/ver/2/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet
+END
+Packet01Login.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet01Login.java
+END
+Packet05GameInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet05GameInfo.java
+END
+Packet02Error.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/dagame/!svn/ver/2/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet02Error.java
+END
+Packet06GameConclusion.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/dagame/!svn/ver/2/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet06GameConclusion.java
+END
+Packet.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet.java
+END
+Packet03Action.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet03Action.java
+END
+Packet08PlayerInfo.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet08PlayerInfo.java
+END
+Packet09HatAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet09HatAction.java
+END
+Packet00KeepAlive.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/dagame/!svn/ver/2/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet00KeepAlive.java
+END
+Packet04GameRequest.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/dagame/!svn/ver/2/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet04GameRequest.java
+END
+Packet07Chat.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/dagame/!svn/ver/3/trunk/RPGPasTop/src/net/slimevoid/rpg/network/packet/Packet07Chat.java
+END

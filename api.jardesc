@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="WINDOWS-1252" standalone="no"?>
+<jardesc>
+    <jar path="Probot/release/scriptAPI.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Probot/api.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <selectedElements exportClassFiles="false" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=Probot/src&lt;net.slimevoid.probot.game.components.script"/>
+    </selectedElements>
+</jardesc>

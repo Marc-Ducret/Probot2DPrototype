@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="" name="SVG">
+	<taskdef name="svg2java"
+	         classname="org.pushingpixels.flamingo.api.svg.SvgTranscoderTask"
+	         classpath="lib/flamingo-svg-transcoder-ant-1.1.1.jar"/>
+	          
+	<svg2java todir="build/icons" verbose="true" namingStrategy="camelcase" template="plain">
+	  <fileset dir="res" includes="**/*.svg*"/>
+	</svg2java>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <defs>
+  <radialGradient spreadMethod="pad" id="svg_2">
+   <stop offset="0" stop-opacity="0.996094" stop-color="#bcbcbc"/>
+   <stop offset="1" stop-opacity="0.992188" stop-color="#afafaf"/>
+  </radialGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <circle id="svg_1" r="40" cy="50" cx="50" stroke-width="2" stroke="#000000" fill="url(#svg_2)"/>
+  <text stroke="#000000" transform="matrix(2.457700729370117,0,0,2.457700729370117,-39.06182423233986,-47.80802860856056) " xml:space="preserve" text-anchor="middle" font-family="Monospace" font-size="24" id="svg_8" y="45.976245" x="36.237864" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" fill="#000000">M</text>
+ </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry excluding="org/jbox2d/gwtemul/org/jbox2d/common/|org/jbox2d/gwtemul/java/lang/" kind="src" path="lib/jbox2d-library/src/main/java"/>
+	<classpathentry kind="src" path="build/icons"/>
+	<classpathentry kind="src" path="res"/>
+	<classpathentry kind="lib" path="lib/rsyntaxtextarea.jar"/>
+	<classpathentry kind="lib" path="lib/autocomplete.jar"/>
+	<classpathentry kind="lib" path="lib/language_support.jar"/>
+	<classpathentry kind="lib" path="lib/rhino-1.7.7.1.jar"/>
+	<classpathentry kind="lib" path="lib/js-engine.jar"/>
+	<classpathentry kind="lib" path="lib/js.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

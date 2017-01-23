@@ -1,0 +1,34 @@
+package net.slimevoid.rpg.network.packet;
+
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+
+import net.slimevoid.rpg.logic.PlayerInfo;
+
+public class Packet08PlayerInfo extends Packet {
+	
+	private PlayerInfo playerInfo;
+	
+	public Packet08PlayerInfo(PlayerInfo playerInfo) {
+		this.playerInfo = playerInfo;
+	}
+	
+	public Packet08PlayerInfo() {
+		this.playerInfo = new PlayerInfo();
+	}
+	
+	@Override
+	public void read(DataInputStream in) throws IOException {
+		playerInfo.read(in);
+	}
+
+	@Override
+	public void write(DataOutputStream out) throws IOException {
+		playerInfo.write(out);
+	}
+	
+	public PlayerInfo getPlayerInfo() {
+		return playerInfo;
+	}
+}
